@@ -16,9 +16,29 @@ export default function App(){
     //         {currentPage == 'Login' ? <Login /> : <Signup />}
     //     </div>
     // )
-    let person = {name:'aasd' ,rollno:'232'};
+    let data = [{
+        name:'surender',
+        rollno:57
+    },
+    {
+        name:'ankush',
+        rollno:37
+    },
+    {
+        name:'ankit',
+        rollno:32
+    },
+    {
+        name:'shivam',
+        rollno:38
+    }
+
+]
+// props de-structure
     return (
-        <Home {...person}/>
+        <p>
+            {data.map((d)=><Home {...d}/>)}
+        </p>
     )
 
 }

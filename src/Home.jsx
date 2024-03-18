@@ -2,6 +2,8 @@ import Item from "./Item"
 
 export default function Home({name,rollno}){
     
+   
+
     return (
         <div >
             {/* <style>
@@ -13,8 +15,9 @@ export default function Home({name,rollno}){
                 }
                 `}
             </style> */}
-            <h5>{name}</h5>
-            <h6>{rollno}</h6>
+        <h3>{name}</h3>
+        <h3>{rollno}</h3>
+
         </div>
     )
 }
