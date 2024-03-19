@@ -1,6 +1,6 @@
-import Item from "./Item"
-
-export default function Home({name,rollno}){
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+export default function Home({name,des,src}){
     
    
 
@@ -15,8 +15,16 @@ export default function Home({name,rollno}){
                 }
                 `}
             </style> */}
-        <h3>{name}</h3>
-        <h3>{rollno}</h3>
+    <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src={src} />
+      <Card.Body>
+        <Card.Title>{name}</Card.Title>
+        <Card.Text>{des}</Card.Text>
+        <Button variant="primary">Go somewhere</Button>
+      </Card.Body>
+    </Card>
+
+export default BasicExample;
 
         </div>
     )

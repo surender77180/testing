@@ -2,7 +2,9 @@ import { useState } from 'react'
 import Login from './LoginPage/login'
 import Signup from './SignUpPage/sign'
 import BasicExample from './nav'
+import Item from './Item'
 import Home from './Home'
+import img from './assets/download.jpeg'
 
 export default function App(){
     // let [currentPage, setCurr] = useState('Login')
@@ -18,25 +20,27 @@ export default function App(){
     // )
     let data = [{
         name:'surender',
-        rollno:57
+        des:'this product is best sales prices.',
+        src: img
     },
     {
         name:'ankush',
-        rollno:37
+        des:'this product is best sales prices.'
     },
     {
         name:'ankit',
-        rollno:32
+        des:'this product is best sales prices.'
     },
     {
         name:'shivam',
-        rollno:38
+        des:'this product is best sales prices.'
     }
 
 ]
 // props de-structure
     return (
         <p>
+            <Item />
             {data.map((d)=><Home {...d}/>)}
         </p>
     )
