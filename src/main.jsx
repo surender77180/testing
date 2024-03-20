@@ -6,11 +6,13 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import LoginIn from './LoginPage/login'
 import Signup from './SignUpPage/sign'
+import Error from './Error'
 
 let router = createBrowserRouter([
   {
     path:'/',
-    element:<App />
+    element:<App />,
+    errorElement:<Error />
   },
   {
     path:'/login',
