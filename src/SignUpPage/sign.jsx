@@ -2,11 +2,13 @@ import React, { useState } from "react"
 import InputBox from "../Input";
 import './sign.css'
 import Button from "react-bootstrap/Button";
+import { useNavigate } from "react-router-dom";
+
 
 function Signup(){
-  let [currentPage, setCurr] = useState('Signup')
+  let [currentPage, setCurr] = useState(0)
   function changeClick(){
-    setCurr(currentPage=='Login' ? 'Signup' : 'Login')
+    setCurr(currentPage=='Signup' ? 'LoginIN' : 'Signup')
   }
 
     return(
@@ -18,7 +20,8 @@ function Signup(){
         <InputBox label='Password' placeholder='Enter password' />
         <Button variant="primary" >Sign IN</Button>        
         <p className="forgot-password text-right">
-          Already registered <a href="/sign-in" onClick={changeClick}>sign in?</a>
+          Already registered <Button onClick={changeClick} >Log-In</Button>
+          
         </p>
       </form>
     )

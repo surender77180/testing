@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Login from './LoginPage/login'
+import Login from './LoginPage/Login'
 import Signup from './SignUpPage/sign'
 import { Container, Row, Col } from 'react-bootstrap';
 import BasicExample from './nav'
